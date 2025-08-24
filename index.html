@@ -1,24 +1,44 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS -->
-    <script defer src="./js/main.js"></script>
-    
-    <title>Control de gastos</title>
-</head>
-<body>
-    <h1>Control de gastos</h1>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JS -->
+        <script defer src="./js/main.js"></script> 
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/styles.css">
 
-    <h2>Gastos</h2>
-    <section id="gastos-container">
+        <title>Control de gastos</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Control de gastos</h1>
+        </header>
+        <!-- Main -->
+        <main id="main-index">
+            
+            <section id="ingresos-container">
+                <h2>Ingresos totales</h2>
+                <p id="ingresos-total">$0</p>
+            </section>
+            
+            <section id="gastos-container">
+                <h2>Gastos totales</h2>
+                <p id="gastos-total">$0</p>
+            </section>
+            
+            <section id="transacciones-container">
+                <div id="transacciones-header">
+                    <h2>Transacciones</h2>
+                    <button id="btn-movimiento">Ingrese Movimiento</button>
+                </div>
+                <div>
+                    <h3>Últimas Transacciones</h3>
 
-    </section>
-
-    <h2>Ingresos</h2>
-    <section id="ingresos-container">
-    </section>
-    
-    <a href="./pages/transacciones.html">Ir a ver las transacciones</a>
-</body>
+                </div>
+                <a href="./pages/transacciones.html">Ver todas las transacciones</a>
+            </section>
+        </main>
+    </body>
 </html>

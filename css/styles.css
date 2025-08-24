@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #444;
+}
+
+#main-index {
+    display: grid;
+    gap: 20px;
+}
+
+#gastos-container, 
+#ingresos-container, 
+#transacciones-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#gastos-container h2,  
+#ingresos-container h2{
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#transacciones-header {
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, botón a la derecha */
+    align-items: center; /* Alinea verticalmente en el centro */
+    margin-bottom: 10px;
+}
+
+button,
+button#limpiar-transacciones {
+    padding: 10px 15px;
+    border: none;
+    background: #4d7eb8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover,
+button#limpiar-transacciones:hover {
+    background: #315c90;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0363cb;
+    text-decoration: underline;
+}
+
+/* === Estilos para la página de Transacciones === */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #080d46;
+    color: white;
+}
+
+thead th {
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+/* Botón limpiar */
+#limpiar-transacciones {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #4d71b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#limpiar-transacciones:hover {
+    background: #508ac8;
+}
+
+/* === Estilos para Agregar Movimiento === */
+
+#form-agregar {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#form-agregar h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#form-movimiento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-movimiento label {
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+#form-movimiento input,
+#form-movimiento select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#btn-guardar {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btn-guardar:hover {
+    background: #45a049;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background: white;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        border: none;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #transacciones-container {
+        grid-column: span 2;
+    }
+    
+}
+

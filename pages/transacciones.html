@@ -1,19 +1,45 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS -->
-    <script defer src="../js/transacciones.js"></script>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Transacciones</title>
-</head>
-<body>
-    <h1>Transacciones</h1>
+        <!-- JS -->
+        <script defer src="./js/main.js"></script> 
 
-    <section id="transacciones-section">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
 
-    </section>
-    
-    <a href="../index.html">Ingresar más ingresos/egresos</a>
-</body>
+        <title>Transacciones</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Transacciones</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>Lista de Transacciones</h2>
+                <table>
+                    
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-transacciones">
+                        <!-- Aquí se cargan dinámicamente -->
+                    </tbody>
+                </table>
+                <button id="limpiar-transacciones">Limpiar todo</button>
+            </section>
+
+            <a href="../index.html">Volver al inicio</a>
+        </main>
+
+    </body>
 </html>
