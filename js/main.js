@@ -1,8 +1,12 @@
-// Redirección del boton "Ingrese Movimiento"
-const boton = document.getElementById('btn-movimiento');
+// Funciones para calcular totales
+function totalIngresos(total, ingresos) {
+    let total = total + ingreso.monto
+    return total 
+    //let ingresos = JSON.parse(localStorage.getItem('ingresos')) || [];
+    //return ingresos.reduce((total, ingreso) => total + ingreso.monto, 0);
+}   
 
-boton.addEventListener('click', function() {
-    window.location.href = './pages/movimientos.html';
-});
-
-
+function totalGastos() {
+    let gastos = JSON.parse(localStorage.getItem('gastos')) || [];
+    return gastos.reduce((total, gasto) => total + gasto.monto, 0);
+}

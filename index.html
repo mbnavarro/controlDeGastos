@@ -18,25 +18,73 @@
         <!-- Main -->
         <main id="main-index">
             
-            <section id="ingresos-container">
-                <h2>Ingresos totales</h2>
-                <p id="ingresos-total">$0</p>
-            </section>
-            
-            <section id="gastos-container">
-                <h2>Gastos totales</h2>
-                <p id="gastos-total">$0</p>
-            </section>
-            
-            <section id="transacciones-container">
-                <div id="transacciones-header">
-                    <h2>Transacciones</h2>
-                    <button id="btn-movimiento">Ingrese Movimiento</button>
+            <section id="resumen-container">
+                <div class="resumen-box" id="ingresos-container">
+                    <h2>Ingresos Totales</h2>
+                    <p id="ingresos-total">$0</p>
                 </div>
-                <div>
-                    <h3>Últimas Transacciones</h3>
+                
+                <div class="resumen-box" id="gastos-container">
+                    <h2>Gastos Totales</h2>
+                    <p id="gastos-total">$0</p>
+                </div>
+            </section>
 
+            
+            <!-- Formularios para agregar ingresos y gastos -->
+            <section id="formulario-container">
+                <div class="form-box" id="form-agregar-ingreso">
+                    <h2>Nuevo Ingreso</h2>
+                    <form id="form-ingreso">
+                        <label for="fecha-ingreso">Fecha</label>
+                        <input type="date" id="fecha-ingreso" required>
+
+                        <label for="categoria-ingreso">Categoría</label>
+                        <select id="categoria-ingreso" required>
+                            <option value="sueldo">Sueldo</option>
+                            <option value="bono">Bono</option>
+                            <option value="venta">Venta</option>
+                            <option value="otros">Otros</option>
+                        </select>
+
+                        <label for="descripcion-ingreso">Descripción</label>
+                        <input type="text" id="descripcion-ingreso" placeholder="Ej: Bono anual">
+
+                        <label for="monto-ingreso">Monto</label>
+                        <input type="number" id="monto-ingreso" placeholder="Ej: 2500" required>
+
+                        <button type="submit" class="btn-guardar">Guardar Movimiento</button>
+                    </form>
                 </div>
+
+                <div class="form-box" id="form-agregar-gasto">
+                    <h2>Nuevo Gasto</h2>
+                    <form id="form-gasto">
+                        <label for="fecha-gasto">Fecha</label>
+                        <input type="date" id="fecha-gasto" required>
+
+                        <label for="categoria-gasto">Categoría</label>
+                        <select id="categoria-gasto" required>
+                            <option value="alquiler">Alquiler</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="comida">Comida</option>
+                            <option value="otros">Otros</option>
+                        </select>
+
+                        <label for="descripcion-gasto">Descripción</label>
+                        <input type="text" id="descripcion-gasto" placeholder="Ej: Pago de luz">
+
+                        <label for="monto-gasto">Monto</label>
+                        <input type="number" id="monto-gasto" placeholder="Ej: 2500" required>
+
+                        <button type="submit" class="btn-guardar">Guardar Movimiento</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="transacciones-container">
+                <h2>Transacciones</h2>
+                <h3>Últimas Transacciones</h3>
                 <a href="./pages/transacciones.html">Ver todas las transacciones</a>
             </section>
         </main>
